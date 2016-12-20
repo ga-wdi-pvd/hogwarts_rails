@@ -2,7 +2,7 @@
 <% @houses.each do |house| %>
   <div class="house">
     <%= link_to "#{house.name}", houses_path(@houses) %>
-    <%= image_tag house.img_url %>
+    <%= link_to (image_tag house.img_url), house %>
 
   </div>
 <% end %>
