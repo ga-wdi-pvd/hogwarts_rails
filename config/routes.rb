@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   resources :houses, only: [:index, :show]
   resources :students, only: [:index, :show]
 
-  get '/house' do
-    'show'
-  end
+  # get '/house' do
+  #   'show'
+  # end
 
 end
