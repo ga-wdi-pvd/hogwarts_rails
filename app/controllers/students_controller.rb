@@ -5,8 +5,9 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @house = House.find(params[:id])
-    @students = @house.student
+    # @house = House.find(params[:id])  don't put that in because its not
+    # nested even though it's one to many relationship
+    @student = Student.find(params[:id])
   end
 
   def new
