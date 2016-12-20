@@ -9,6 +9,8 @@
 Student.destroy_all
 House.destroy_all
 
+@students = [harry, ron, hermione, luna, cho, cedric, draco, pansy].sample
+
 gryffindor = House.create(name:"Gryffindor", image_url:"http://images1.wikia.nocookie.net/__cb20120922143611/harrypotter/images/7/70/G_final.jpg")
 hufflepuff = House.create(name:"Hufflepuff", image_url:"http://images3.wikia.nocookie.net/__cb20111027164827/harrypotter/images/3/3f/H_final.jpg")
 ravenclaw = House.create(name:"Ravenclaw", image_url:"http://images2.wikia.nocookie.net/__cb20111021043857/harrypotter/images/d/da/R_final.jpg")
