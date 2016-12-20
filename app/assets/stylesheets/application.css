@@ -54,7 +54,9 @@ h2 {
   display: block;
 }
 
-img {
-  border-radius: 40%;
+.student img {
+  display: block;
+  margin: 10px auto;
+  border-radius: 20%;
   height: 300px;
 }
