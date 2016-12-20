@@ -1,4 +1,4 @@
-class HouseController < ApplicationController
+class HousesController < ApplicationController
 
   def index
     @houses = House.all
@@ -14,7 +14,7 @@ class HouseController < ApplicationController
 
   def create
     @house = House.new(house_params)
-    if @book.save
+    if @house.save
       redirect_to :action => 'index'
     else
       render :action => 'new'
@@ -26,7 +26,7 @@ class HouseController < ApplicationController
   end
 
   def edit
-    @book = Book.find(params[:id])
+    @house = House.find(params[:id])
   end
 
   def update
