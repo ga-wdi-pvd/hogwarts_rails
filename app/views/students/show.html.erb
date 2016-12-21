@@ -1,5 +1,10 @@
-<h1><%= @student.name %></h1>
-<h2><%= @student.house %></h2>
+<h1><%= @students.name %></h1>
+<h2><%= @students.house.name %></h2>
 <div class="student">
-  <%= image_tag @student.img_url />
+  <%= image_tag @students.img_url %>
 </div>
+<form action="/students/<%= @students.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="delete">
+  <input class="button-delete" type="submit" value="Delete Student">
+</form>
