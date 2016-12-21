@@ -1,11 +1,11 @@
 class CreateStudents < ActiveRecord::Migration
   def change
-    create_table :students do |t|
-      t.string :name, null: false
-      t.string :img_url
-      t.references :house, null: false, index:true
+    create_table :students do |f|
+      f.string :name, null: false
+      f.string :img_url
+      f.references :house, null: false, index:true
 
-      t.timestamps
+      f.timestamps
     end
   end
 end
