@@ -1,11 +1,12 @@
-class HouseController < ApplicationController
+class HousesController < ApplicationController
 
   def index
-    @houses = Houses.all
+    @houses = House.all
+    logger.info "Index \n\n"
   end
 
   def show
-    @houses = Houses.all
+    @houses = House.all
   end
 
 end
