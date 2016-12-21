@@ -4,6 +4,9 @@ class StudentsController < ApplicationController
       @students = Student.all
     end
 
+    def show
+      @students = Student.find(params[:id])
+    end
     #new
     def new
       @students = Student.new
@@ -11,15 +14,23 @@ class StudentsController < ApplicationController
 
     # create
     def create
-
-      @students = Student.create(student_params)
+      @students = Student.new(student_params)
+      @students.sorting_hat
+      @students.save!
       redirect_to students_path(@students)
     end
 
-    def show
-      @houses = House.all
+    def destroy
       @students = Student.find(params[:id])
+      @students.destroy
+
+      redirect_to "/students"
     end
+
+    private
+  def student_params
+    params.require(:student).permit(:name, :img_url)
+  end
 
 
 
